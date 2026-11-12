@@ -1,0 +1,628 @@
+{
+ "quiz": {
+  "DEV1-E1": [
+   {
+    "q": "Qual destas frases NÃO descreve um bom algoritmo?",
+    "opcoes": [
+     "Termina em algum momento (é finito)",
+     "Cada passo é claro, sem ninguém precisar adivinhar",
+     "Os passos estão na ordem certa",
+     "Alguém precisa adivinhar o que cada passo quer dizer"
+    ],
+    "ok": 3,
+    "porque": "O computador nunca pergunta. Se o passo é ambíguo, o algoritmo falha. Ambiguidade é o inimigo número um."
+   },
+   {
+    "q": "Qual é a ordem correta para limpar a fila de impressão?",
+    "opcoes": [
+     "Apagar os arquivos da pasta PRINTERS, parar o Spooler, iniciar o Spooler",
+     "Parar o Spooler, apagar os arquivos da pasta PRINTERS, iniciar o Spooler",
+     "Iniciar o Spooler, apagar os arquivos, parar o Spooler",
+     "Apagar os arquivos, iniciar o Spooler, parar o Spooler"
+    ],
+    "ok": 1,
+    "porque": "Enquanto o Spooler está rodando, ele segura os arquivos da fila. Primeiro se para o serviço, depois se apaga, depois se inicia de novo."
+   },
+   {
+    "q": "Qual a diferença entre algoritmo e programa?",
+    "opcoes": [
+     "São exatamente a mesma coisa",
+     "Algoritmo é a sequência de passos (a ideia); programa é esse algoritmo escrito numa linguagem que o computador entende",
+     "Programa é sempre menor que o algoritmo",
+     "Algoritmo só existe dentro de computadores"
+    ],
+    "ok": 1,
+    "porque": "A receita é a ideia. Quando você a traduz para Python, JavaScript etc., ela vira um programa."
+   }
+  ],
+  "DEV1-E2": [
+   {
+    "q": "Quanto valem 17 DIV 5 e 17 MOD 5, nessa ordem?",
+    "opcoes": [
+     "3 e 2",
+     "3,4 e 0",
+     "2 e 3",
+     "5 e 17"
+    ],
+    "ok": 0,
+    "porque": "17 dividido por 5 dá 3 (quociente inteiro, DIV) e sobram 2 (resto, MOD). Conferência: 3 × 5 + 2 = 17."
+   },
+   {
+    "q": "No algoritmo do disco (LEIA total_gb, LEIA livre_gb, percentual ← livre_gb / total_gb * 100, ESCREVA percentual), qual é a ENTRADA?",
+    "opcoes": [
+     "O percentual calculado",
+     "A mensagem mostrada na tela",
+     "total_gb e livre_gb, os dados que chegam de fora",
+     "A conta livre_gb / total_gb * 100"
+    ],
+    "ok": 2,
+    "porque": "Entrada é o que chega (LEIA). A conta é o processamento e o que aparece na tela é a saída."
+   },
+   {
+    "q": "Por que um SSD de \"256 GB\" aparece com cerca de 238 GB no Windows?",
+    "opcoes": [
+     "É um defeito de fábrica",
+     "O fabricante conta 1 GB = 1.000.000.000 bytes e o Windows divide por 1024 três vezes",
+     "O Windows apaga 18 GB assim que é instalado",
+     "É sinal de vírus"
+    ],
+    "ok": 1,
+    "porque": "256.000.000.000 bytes divididos por 1024 três vezes dão cerca de 238 GB. Não é defeito, é a conta."
+   }
+  ],
+  "DEV1-E3": [
+   {
+    "q": "O que aparece na tela?\n\na ← 5\nb ← 7\na ← b\nb ← a\nESCREVA a, b",
+    "opcoes": [
+     "5 7",
+     "7 5",
+     "7 7",
+     "5 5"
+    ],
+    "ok": 2,
+    "porque": "Na terceira linha o 5 é sobrescrito: a vale 7. Na quarta, b recebe o novo a (7). Por isso precisamos de uma variável auxiliar para trocar."
+   },
+   {
+    "q": "Qual é o tipo mais adequado para o endereço IP 192.168.0.1?",
+    "opcoes": [
+     "Inteiro",
+     "Real",
+     "Texto",
+     "Lógico"
+    ],
+    "ok": 2,
+    "porque": "Não existe número com dois pontos e não faz sentido somar IPs. IP é texto."
+   },
+   {
+    "q": "O que aparece na tela?\n\nx ← 3\ny ← x * 2\nx ← y + 1\nESCREVA x, y",
+    "opcoes": [
+     "7 6",
+     "4 6",
+     "3 6",
+     "7 7"
+    ],
+    "ok": 0,
+    "porque": "y vale 3 × 2 = 6. Depois x vale 6 + 1 = 7. A saída é 7 6."
+   }
+  ],
+  "DEV1-E4": [
+   {
+    "q": "O que este trecho mostra para percentual = 5?\n\nSE percentual < 25 ENTÃO ESCREVA \"Atenção\"\nSENÃO SE percentual < 10 ENTÃO ESCREVA \"Crítico\"\nSENÃO ESCREVA \"OK\"",
+    "opcoes": [
+     "Crítico",
+     "Atenção",
+     "OK",
+     "Nada"
+    ],
+    "ok": 1,
+    "porque": "O computador executa o primeiro bloco cujo teste é verdadeiro. 5 < 25 é verdadeiro, então para ali. O \"Crítico\" nunca aparece: a ordem das condições está errada."
+   },
+   {
+    "q": "Para testar a fronteira da condição percentual < 10, quais valores faz mais sentido testar?",
+    "opcoes": [
+     "Só o 10",
+     "9, 10 e 11",
+     "0 e 100",
+     "Um valor qualquer sorteado"
+    ],
+    "ok": 1,
+    "porque": "Fronteira: um valor abaixo, o valor exato e um acima. É assim que se pega o erro de < versus ≤."
+   },
+   {
+    "q": "Qual é a diferença entre SE x = 5 e x ← 5?",
+    "opcoes": [
+     "Não há diferença",
+     "SE x = 5 pergunta se x vale 5; x ← 5 guarda o 5 em x",
+     "SE x = 5 guarda o 5; x ← 5 pergunta se x vale 5",
+     "As duas guardam o valor 5"
+    ],
+    "ok": 1,
+    "porque": "= compara (pergunta). ← atribui (guarda). Misturar os dois é um dos erros mais comuns de iniciante."
+   }
+  ],
+  "DEV1-E5": [
+   {
+    "q": "A OU B só é FALSO quando...",
+    "opcoes": [
+     "A é falso",
+     "B é falso",
+     "A e B são falsos",
+     "A e B são verdadeiros"
+    ],
+    "ok": 2,
+    "porque": "OU é verdadeiro se pelo menos uma das partes for verdadeira. Só falha quando as duas são falsas."
+   },
+   {
+    "q": "Pela lei de De Morgan, NÃO (ativo E horario_ok) equivale a...",
+    "opcoes": [
+     "NÃO ativo E NÃO horario_ok",
+     "NÃO ativo OU NÃO horario_ok",
+     "ativo OU horario_ok",
+     "ativo E NÃO horario_ok"
+    ],
+    "ok": 1,
+    "porque": "Negar um E vira um OU de negações: \"inativo OU fora do horário\". Negar um OU vira um E de negações."
+   },
+   {
+    "q": "Como é avaliado A OU B E C?",
+    "opcoes": [
+     "(A OU B) E C",
+     "A OU (B E C)",
+     "Da esquerda para a direita, sempre",
+     "É um erro de sintaxe"
+    ],
+    "ok": 1,
+    "porque": "A ordem é NÃO, depois E, depois OU. Mesmo assim, use sempre parênteses para deixar claro."
+   }
+  ],
+  "DEV1-E6": [
+   {
+    "q": "O que há de errado neste trecho?\n\ni ← 1\nENQUANTO i ≤ 5\n    ESCREVA i\nFIM-ENQUANTO",
+    "opcoes": [
+     "Nada, mostra de 1 a 5",
+     "É um laço infinito: ninguém altera i",
+     "Mostra de 0 a 5",
+     "Não executa nenhuma vez"
+    ],
+    "ok": 1,
+    "porque": "A condição i ≤ 5 nunca fica falsa porque i nunca muda. Pergunta de segurança: o que faz esta condição ficar falsa?"
+   },
+   {
+    "q": "Quantas vezes executa o bloco de PARA i DE 1 ATÉ 10?",
+    "opcoes": [
+     "9",
+     "10",
+     "11",
+     "Depende do conteúdo"
+    ],
+    "ok": 1,
+    "porque": "De 1 até 10 incluindo os dois extremos são 10 voltas. Contar errado uma volta é o erro off-by-one."
+   },
+   {
+    "q": "Qual laço garante que o bloco rode PELO MENOS uma vez?",
+    "opcoes": [
+     "ENQUANTO",
+     "PARA",
+     "REPITA ... ATÉ",
+     "Nenhum"
+    ],
+    "ok": 2,
+    "porque": "REPITA...ATÉ testa a condição depois da volta, então roda ao menos uma vez. ENQUANTO testa antes e pode não rodar nenhuma."
+   }
+  ],
+  "DEV1-E7": [
+   {
+    "q": "Qual é a diferença entre ESCREVA e RETORNE dentro de uma função?",
+    "opcoes": [
+     "Nenhuma",
+     "ESCREVA mostra na tela; RETORNE devolve o valor para o programa continuar usando",
+     "RETORNE mostra na tela; ESCREVA devolve",
+     "Os dois guardam o valor numa variável"
+    ],
+    "ok": 1,
+    "porque": "Só quem RETORNA pode ser usado numa conta (x ← f(...) + 5). ESCREVA mostra e acabou."
+   },
+   {
+    "q": "Em p ← percentual_livre(256, 32), o que são 256 e 32?",
+    "opcoes": [
+     "Parâmetros",
+     "Argumentos",
+     "Retornos",
+     "Variáveis locais"
+    ],
+    "ok": 1,
+    "porque": "Parâmetro é o nome na definição da função (total, livre). Argumento é o valor entregue na chamada (256, 32)."
+   },
+   {
+    "q": "Por que é bom uma função fazer uma coisa só?",
+    "opcoes": [
+     "Porque o computador é mais rápido",
+     "Porque fica fácil de entender, testar e corrigir num lugar só",
+     "Porque é obrigatório",
+     "Porque economiza memória"
+    ],
+    "ok": 1,
+    "porque": "Função pequena e com um objetivo é reutilizável e se conserta uma vez, valendo para todos que a usam."
+   }
+  ],
+  "DEV1-E8": [
+   {
+    "q": "Qual é a saída?\n\nsoma ← 0\nPARA i DE 1 ATÉ 4\n    soma ← soma + i * i\nFIM-PARA\nESCREVA soma",
+    "opcoes": [
+     "10",
+     "16",
+     "30",
+     "20"
+    ],
+    "ok": 2,
+    "porque": "1 + 4 + 9 + 16 = 30. Acompanhando soma a cada volta: 1, 5, 14, 30."
+   },
+   {
+    "q": "Média até digitar 0 (o 0 conta como dado no algoritmo da aula). Entradas 4, 8, 0. O que o algoritmo mostra?",
+    "opcoes": [
+     "6",
+     "4",
+     "12",
+     "8"
+    ],
+    "ok": 1,
+    "porque": "soma=12 e cont=3 porque o 0 de parada foi contado. 12 / 3 = 4. O esperado era (4+8)/2 = 6. O teste de mesa mostrou o desvio."
+   },
+   {
+    "q": "O que a ÚLTIMA linha da tabela do teste de mesa de um ENQUANTO deve mostrar?",
+    "opcoes": [
+     "A primeira volta",
+     "O teste que faz o laço parar (condição falsa)",
+     "Só o resultado final",
+     "Nada"
+    ],
+    "ok": 1,
+    "porque": "É ali que se confirma que o laço termina de verdade. Se a condição nunca fica falsa, você achou um laço infinito."
+   }
+  ],
+  "DEV1-E9": [
+   {
+    "q": "Diante de um problema que parece grande demais, qual é o primeiro passo?",
+    "opcoes": [
+     "Começar a escrever código",
+     "Dividir em partes menores que você já sabe resolver",
+     "Procurar uma solução pronta",
+     "Decorar a resposta"
+    ],
+    "ok": 1,
+    "porque": "Decomposição: entender entrada e saída, quebrar em partes e resolver a mais simples primeiro."
+   },
+   {
+    "q": "O que o losango de um fluxograma representa?",
+    "opcoes": [
+     "Início ou fim",
+     "Uma conta",
+     "Uma decisão com saídas rotuladas (sim/não)",
+     "Uma leitura de dados"
+    ],
+    "ok": 2,
+    "porque": "Decisão: uma pergunta com resposta sim ou não, com uma seta de saída para cada resposta."
+   },
+   {
+    "q": "Como o fluxograma ajuda a achar furos?",
+    "opcoes": [
+     "Deixa o código mais rápido",
+     "Mostra todos os caminhos; um que não chega ao Fim ou uma decisão com uma saída só é um furo",
+     "Substitui o teste",
+     "Não ajuda"
+    ],
+    "ok": 1,
+    "porque": "Seguir as setas como num mapa expõe caminhos mortos antes de escrever qualquer código."
+   }
+  ],
+  "DEV1-E10": [
+   {
+    "q": "Backup de 500 GB a 100 MB/s, com 1 GB = 1024 MB. Quanto tempo leva?",
+    "opcoes": [
+     "1 h 23 min 20 s",
+     "1 h 25 min 20 s",
+     "1 h 40 min",
+     "50 min"
+    ],
+    "ok": 1,
+    "porque": "500 × 1024 = 512.000 MB; ÷ 100 = 5.120 s = 1 h (3.600 s) + 1.520 s = 1 h 25 min 20 s."
+   },
+   {
+    "q": "Troco de R$ 289 com notas de 100, 50, 20, 10, 5 e 2. Qual é a combinação correta?",
+    "opcoes": [
+     "2×100, 1×50, 1×20, 1×10, 1×5, 2×2",
+     "1×100, 3×50, 1×20, 1×10, 1×5, 2×2",
+     "2×100, 1×50, 2×20, 1×5, 2×2",
+     "3×100, 1×20, 1×10, 1×5, 2×2"
+    ],
+    "ok": 0,
+    "porque": "289 DIV 100 = 2 (sobra 89); 89 DIV 50 = 1 (39); 39 DIV 20 = 1 (19); 19 DIV 10 = 1 (9); 9 DIV 5 = 1 (4); 4 DIV 2 = 2 (0)."
+   },
+   {
+    "q": "Num problema novo, quando você pode dizer que o algoritmo está certo?",
+    "opcoes": [
+     "Quando rodou uma vez sem erro",
+     "Quando passou no teste de mesa com um caso pequeno e com os valores de fronteira, e você sabe explicar por quê",
+     "Quando é curto",
+     "Quando alguém aprovou"
+    ],
+    "ok": 1,
+    "porque": "'Parece funcionar' não basta: caso pequeno, fronteiras e uma explicação em palavras próprias são a prova."
+   }
+  ]
+ },
+ "prova": {
+  "DEV1": {
+   "nObj": 8,
+   "nDiss": 4,
+   "pool": [
+    {
+     "id": "o1",
+     "enunciado": "Qual alternativa descreve melhor um algoritmo?",
+     "opcoes": [
+      "Um programa escrito em Python",
+      "Uma sequência finita, clara e ordenada de passos que resolve um problema",
+      "Um fluxograma desenhado no papel",
+      "Qualquer lista de tarefas"
+     ],
+     "ok": 1,
+     "porque": "Algoritmo é a ideia: finito, claro e ordenado. A linguagem é outro assunto."
+    },
+    {
+     "id": "o2",
+     "enunciado": "Um chamado tem sintoma, diagnóstico e solução. Em termos de entrada, processamento e saída, qual é o mapeamento correto?",
+     "opcoes": [
+      "Sintoma = saída; diagnóstico = entrada; solução = processamento",
+      "Sintoma = entrada; diagnóstico = processamento; solução = saída",
+      "Sintoma = processamento; diagnóstico = saída; solução = entrada",
+      "Os três são entrada"
+     ],
+     "ok": 1,
+     "porque": "O sintoma chega (entrada), o diagnóstico é o que se faz com ele (processamento) e a solução é o que se entrega (saída)."
+    },
+    {
+     "id": "o3",
+     "enunciado": "Usando DIV e MOD, 135 minutos correspondem a:",
+     "opcoes": [
+      "1 h 75 min",
+      "2 h 15 min",
+      "13 h 5 min",
+      "2 h 35 min"
+     ],
+     "ok": 1,
+     "porque": "135 DIV 60 = 2 horas e 135 MOD 60 = 15 minutos."
+    },
+    {
+     "id": "o4",
+     "enunciado": "Qual destes nomes de variável explica melhor o que ela guarda (espaço livre do disco, em GB)?",
+     "opcoes": [
+      "x",
+      "dado",
+      "temp",
+      "livre_gb"
+     ],
+     "ok": 3,
+     "porque": "O nome diz o que é e, se tiver unidade, ela vai junto."
+    },
+    {
+     "id": "o5",
+     "enunciado": "O que faz a instrução n ← n + 1?",
+     "opcoes": [
+      "Compara n com n + 1",
+      "Lê o valor atual de n, soma 1 e guarda o resultado de volta em n",
+      "Gera um erro, porque n não pode ser igual a n + 1",
+      "Cria uma nova variável chamada n + 1"
+     ],
+     "ok": 1,
+     "porque": "← não é igualdade de matemática. É \"guarde o que está à direita na caixa da esquerda\"."
+    },
+    {
+     "id": "o6",
+     "enunciado": "O que resulta de 10 + 5 (números) e de \"10\" + \"5\" (textos), nessa ordem?",
+     "opcoes": [
+      "15 e 15",
+      "\"105\" e 15",
+      "15 e \"105\"",
+      "15 e erro"
+     ],
+     "ok": 2,
+     "porque": "Números somam. Textos se juntam (concatenam). Muitos bugs nascem de um número que virou texto."
+    },
+    {
+     "id": "o7",
+     "enunciado": "Regra: abaixo de 10% livre é CRÍTICO; abaixo de 25% é ATENÇÃO; o resto é OK. Qual é o resultado para exatamente 10% livre?",
+     "opcoes": [
+      "CRÍTICO",
+      "ATENÇÃO",
+      "OK",
+      "Erro"
+     ],
+     "ok": 1,
+     "porque": "10 não é menor que 10 (não é crítico), mas é menor que 25 (atenção). Os valores de fronteira precisam estar escritos."
+    },
+    {
+     "id": "o8",
+     "enunciado": "Quais valores você testaria para a fronteira de 25%?",
+     "opcoes": [
+      "25 apenas",
+      "0 e 100",
+      "24, 25 e 26",
+      "10, 25 e 50"
+     ],
+     "ok": 2,
+     "porque": "Um abaixo, o exato e um acima."
+    },
+    {
+     "id": "o9",
+     "enunciado": "Regra de acesso: (ativo E mfa) OU admin. Um usuário INATIVO, sem MFA, mas com admin verdadeiro. Qual o resultado?",
+     "opcoes": [
+      "Nega, porque está inativo",
+      "Permite, porque o OU é satisfeito por admin (e isso é um furo de segurança)",
+      "Depende do horário",
+      "A regra gera erro"
+     ],
+     "ok": 1,
+     "porque": "(F E F) OU V = V. Um admin inativo entra. É preciso exigir conta ativa para todos."
+    },
+    {
+     "id": "o10",
+     "enunciado": "NÃO (a > 5 E b < 3) equivale a:",
+     "opcoes": [
+      "a ≤ 5 E b ≥ 3",
+      "a ≤ 5 OU b ≥ 3",
+      "a > 5 OU b < 3",
+      "a < 5 OU b > 3"
+     ],
+     "ok": 1,
+     "porque": "De Morgan: nega-se cada parte (> vira ≤, < vira ≥) e o E vira OU."
+    },
+    {
+     "id": "o11",
+     "enunciado": "Em A E B, se A é falso, o que o computador faz (curto-circuito)?",
+     "opcoes": [
+      "Avalia B mesmo assim",
+      "Não avalia B, porque o resultado já é falso",
+      "Gera um erro",
+      "Devolve verdadeiro"
+     ],
+     "ok": 1,
+     "porque": "Em E, se o primeiro já é falso, o resultado já está decidido. Isso evita, por exemplo, uma divisão por zero."
+    },
+    {
+     "id": "o12",
+     "enunciado": "Qual é a condição correta para ano bissexto?",
+     "opcoes": [
+      "(a MOD 4 = 0 E a MOD 100 ≠ 0) OU a MOD 400 = 0",
+      "a MOD 4 = 0 E a MOD 100 = 0",
+      "a MOD 4 = 0 OU a MOD 100 ≠ 0",
+      "a MOD 400 = 0 E a MOD 4 ≠ 0"
+     ],
+     "ok": 0,
+     "porque": "Divisível por 4 e não por 100, ou divisível por 400. Teste: 2000 sim, 1900 não, 2024 sim, 2023 não."
+    },
+    {
+     "id": "o13",
+     "enunciado": "Qual é a saída?\n\nsoma ← 0\nPARA i DE 1 ATÉ 100\n    soma ← soma + i\nFIM-PARA\nESCREVA soma",
+     "opcoes": [
+      "100",
+      "5050",
+      "5000",
+      "10100"
+     ],
+     "ok": 1,
+     "porque": "Acumulador somando de 1 a 100: 5050."
+    },
+    {
+     "id": "o14",
+     "enunciado": "Quantas vezes o bloco roda?\n\ni ← 0\nENQUANTO i ≤ 10\n    ...\n    i ← i + 1\nFIM-ENQUANTO",
+     "opcoes": [
+      "10",
+      "11",
+      "9",
+      "Infinitas"
+     ],
+     "ok": 1,
+     "porque": "i vale 0, 1, 2, ..., 10: são 11 valores. Com i < 10 seriam 10. É o off-by-one."
+    },
+    {
+     "id": "o15",
+     "enunciado": "Por que este laço nunca termina?\n\nn ← 10\nENQUANTO n > 0\n    ESCREVA n\nFIM-ENQUANTO",
+     "opcoes": [
+      "Porque n é 10",
+      "Porque nada altera n dentro do laço",
+      "Porque falta o LEIA",
+      "Porque o ENQUANTO é errado"
+     ],
+     "ok": 1,
+     "porque": "A condição n > 0 permanece verdadeira para sempre. Falta algo como n ← n - 1."
+    },
+    {
+     "id": "o16",
+     "enunciado": "FUNÇÃO f(n): RETORNE n * 2 + 1. Quanto vale f(f(3))?",
+     "opcoes": [
+      "7",
+      "15",
+      "13",
+      "9"
+     ],
+     "ok": 1,
+     "porque": "f(3) = 7; f(7) = 15."
+    },
+    {
+     "id": "o17",
+     "enunciado": "Uma função só tem ESCREVA, sem RETORNE. O que acontece com x ← f(2) + 5?",
+     "opcoes": [
+      "Funciona normalmente",
+      "Não dá para usar o resultado na conta, porque nada foi devolvido",
+      "Soma 5 à tela",
+      "Mostra 5"
+     ],
+     "ok": 1,
+     "porque": "Só quem RETORNA devolve um valor que pode entrar numa expressão."
+    },
+    {
+     "id": "o18",
+     "enunciado": "Qual é a saída?\n\na ← 2\nb ← 3\nPARA i DE 1 ATÉ 3\n    a ← a + b\n    b ← b + 1\nFIM-PARA\nESCREVA a, b",
+     "opcoes": [
+      "9 5",
+      "14 6",
+      "11 6",
+      "14 5"
+     ],
+     "ok": 1,
+     "porque": "Volta 1: a=5, b=4. Volta 2: a=9, b=5. Volta 3: a=14, b=6."
+    },
+    {
+     "id": "o19",
+     "enunciado": "Com n = 4, quantas voltas faz?\n\npassos ← 0\nENQUANTO n ≠ 1\n    SE n MOD 2 = 0 ENTÃO n ← n DIV 2\n    SENÃO n ← 3 * n + 1\n    passos ← passos + 1\nFIM-ENQUANTO",
+     "opcoes": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "ok": 1,
+     "porque": "4 vira 2 (passo 1) e 2 vira 1 (passo 2): para com n = 1, passos = 2."
+    },
+    {
+     "id": "o20",
+     "enunciado": "Num fluxograma, uma decisão (losango) com apenas UMA seta de saída indica:",
+     "opcoes": [
+      "Um caminho rápido",
+      "Um furo: falta o outro caminho",
+      "Um laço correto",
+      "Uma função"
+     ],
+     "ok": 1,
+     "porque": "Toda pergunta sim/não precisa de duas saídas. Uma só deixa um caso sem destino."
+    }
+   ],
+   "dissertativas": [
+    {
+     "id": "d1",
+     "enunciado": "Escreva em pseudocódigo um algoritmo que leia o total e o livre de um disco (em GB) e mostre CRÍTICO (abaixo de 10% livre), ATENÇÃO (abaixo de 25%) ou OK. Depois liste 6 valores de fronteira que você testaria e o resultado esperado em cada um."
+    },
+    {
+     "id": "d2",
+     "enunciado": "Explique com suas palavras por que a ORDEM das condições importa num SE / SENÃO SE. Dê um exemplo do seu dia a dia em TI e mostre o que dá errado quando a ordem está trocada."
+    },
+    {
+     "id": "d3",
+     "enunciado": "A regra de VPN é: (ativo E mfa) OU (admin E rede_interna). Aponte um furo de segurança, diga quem consegue entrar sem deveria e reescreva a regra corrigida."
+    },
+    {
+     "id": "d4",
+     "enunciado": "Com a = 1, b = 2 e c = 3, escreva um algoritmo que deixe a = 2, b = 3 e c = 1 usando UMA variável auxiliar. Faça o acompanhamento passo a passo mostrando o valor de cada variável depois de cada linha."
+    },
+    {
+     "id": "d5",
+     "enunciado": "Escreva uma função soma_digitos(n) em pseudocódigo (use DIV e MOD) e faça o teste de mesa completo com n = 1234, mostrando o valor de n, d e soma a cada volta."
+    },
+    {
+     "id": "d6",
+     "enunciado": "Decomponha este pedido em funções e escreva o pseudocódigo: dada uma lista de impressoras, cada uma com status (online/offline) e toner (%), mostre as que precisam de atenção (offline OU toner abaixo de 15%). Diga quais casos de borda você testaria."
+    }
+   ]
+  }
+ }
+}

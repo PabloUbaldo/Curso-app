@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trilha: estudo e carreira</title>
+<meta name="description" content="App de estudo e evolução de carreira em TI: cursos, provas, tempo ativo e log de progresso.">
+<meta name="theme-color" content="#0c1117">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="logo">Tri<span>lha</span></div>
+  <div class="pill" id="pill">⏱ 0 min hoje</div>
+</header>
+<main id="app"><p class="mute">Carregando…</p></main>
+<nav class="nav" id="nav">
+  <a href="#/" data-n="home"><b>🏠</b>Painel</a>
+  <a href="#/cursos" data-n="cursos"><b>📚</b>Cursos</a>
+  <a href="#/log" data-n="log"><b>📋</b>Log</a>
+  <a href="#/config" data-n="config"><b>⚙️</b>Config</a>
+</nav>
+<script>window.TRILHA_CURSOS = [];</script>
+<script src="js/sha256.js"></script>
+<script src="js/md.js"></script>
+<script src="cursos/carreira.js"></script>
+<script src="cursos/dev.js"></script>
+<script src="cursos/ingles.js"></script>
+<script src="cursos/obsidian.js"></script>
+<script src="js/core.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
